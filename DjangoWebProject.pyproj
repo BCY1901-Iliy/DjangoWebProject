@@ -1,0 +1,191 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>DjangoWebProject</Name>
+    <RootNamespace>DjangoWebProject</RootNamespace>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2475a40b-ca37-4b2a-8fd4-d747bd18d35f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>DjangoWebProject.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cart\admin.py" />
+    <Compile Include="cart\apps.py" />
+    <Compile Include="cart\cart.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\context_processors.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\migrations\__init__.py" />
+    <Compile Include="cart\models.py" />
+    <Compile Include="cart\tests.py" />
+    <Compile Include="cart\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\views.py" />
+    <Compile Include="cart\__init__.py" />
+    <Compile Include="coupons\admin.py" />
+    <Compile Include="coupons\apps.py" />
+    <Compile Include="coupons\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="coupons\migrations\__init__.py" />
+    <Compile Include="coupons\models.py" />
+    <Compile Include="coupons\tests.py" />
+    <Compile Include="coupons\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="coupons\views.py" />
+    <Compile Include="coupons\__init__.py" />
+    <Compile Include="DjangoWebProject\celery.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="manage.py" />
+    <Compile Include="DjangoWebProject\__init__.py" />
+    <Compile Include="DjangoWebProject\settings.py" />
+    <Compile Include="DjangoWebProject\urls.py" />
+    <Compile Include="DjangoWebProject\wsgi.py" />
+    <Compile Include="orders\admin.py" />
+    <Compile Include="orders\apps.py" />
+    <Compile Include="orders\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders\migrations\__init__.py" />
+    <Compile Include="orders\models.py" />
+    <Compile Include="orders\tasks.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders\tests.py" />
+    <Compile Include="orders\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders\views.py" />
+    <Compile Include="orders\__init__.py" />
+    <Compile Include="shop\admin.py" />
+    <Compile Include="shop\apps.py" />
+    <Compile Include="shop\migrations\__init__.py" />
+    <Compile Include="shop\models.py" />
+    <Compile Include="shop\tests.py" />
+    <Compile Include="shop\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shop\views.py" />
+    <Compile Include="shop\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cart\templates\cart\detail.html" />
+    <Content Include="cart\templates\cart\index.html" />
+    <Content Include="coupons\templates\coupons\index.html" />
+    <Content Include="orders\templates\admin\orders\order\detail.html" />
+    <Content Include="orders\templates\orders\index.html" />
+    <Content Include="orders\templates\orders\order\create.html" />
+    <Content Include="orders\templates\orders\order\created.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="shop\templates\shop\base.html" />
+    <Content Include="shop\templates\shop\index.html" />
+    <Content Include="shop\templates\shop\product\detail.html" />
+    <Content Include="shop\templates\shop\product\list.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cart\" />
+    <Folder Include="cart\migrations\" />
+    <Folder Include="cart\templates\" />
+    <Folder Include="cart\templates\cart\" />
+    <Folder Include="coupons\" />
+    <Folder Include="coupons\migrations\" />
+    <Folder Include="coupons\templates\" />
+    <Folder Include="coupons\templates\coupons\" />
+    <Folder Include="DjangoWebProject\" />
+    <Folder Include="orders\" />
+    <Folder Include="orders\migrations\" />
+    <Folder Include="orders\templates\" />
+    <Folder Include="orders\templates\admin\" />
+    <Folder Include="orders\templates\admin\orders\" />
+    <Folder Include="orders\templates\admin\orders\order\" />
+    <Folder Include="orders\templates\orders\" />
+    <Folder Include="orders\templates\orders\order\" />
+    <Folder Include="shop\" />
+    <Folder Include="shop\migrations\" />
+    <Folder Include="shop\static\" />
+    <Folder Include="shop\static\css\" />
+    <Folder Include="shop\templates\" />
+    <Folder Include="shop\templates\shop\" />
+    <Folder Include="shop\templates\shop\product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
+      <Version>3.7</Version>
+      <Description>env1 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

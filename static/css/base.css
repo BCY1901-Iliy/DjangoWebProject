@@ -1,0 +1,183 @@
+* {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(253, 253, 226);
+}
+
+/* Header/logo Title */
+#header {
+  padding: 50px;
+  text-decoration: none;
+  text-align: center;
+  background: #7c8ffd;
+  color: rgb(0, 0, 0);
+}
+#subheader{
+  text-align: center;
+  width: auto;
+  font-size: 25px;
+  background-color: rgb(107, 247, 125);
+  color:rgb(79, 2, 102)
+}
+/* Increase the font size of the heading */
+#header a {
+  font-size: 50px;
+  color: rgb(34, 32, 66);
+  text-decoration: none;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+#sidebar {
+  overflow: hidden;
+  background-color: rgb(224, 253, 116);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+#sidebar a {
+  float: left;
+  display: block;
+  color: rgb(194, 29, 245);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+#sidebar a.right {
+  float: right;
+  
+}
+.cart{
+  padding: 20px;
+  text-decoration: none;
+}
+.cart a{
+  text-decoration: none;
+  color: rgb(59, 56, 252);
+}
+
+.cart img{
+  width: 200px;
+  height: 200px;;
+
+}
+.cart a{
+  align-content: center;
+  padding: 40px;
+}
+.total{
+  width: auto;
+  text-align: right;
+  padding: 30px;
+}
+.num{
+  text-align:left;
+  padding: 20px;
+}
+/* Change color on hover */
+#sidebar a:hover {
+  background-color: rgb(227, 252, 0);
+  color: rgb(194, 29, 245);
+}
+.text-right{
+  font-size: 25px;
+  
+  padding: 40px;
+}
+.button{
+  text-decoration: none;
+  padding: 30px;
+  color: crimson;
+}
+/* Active/current link */
+#sidebar a.selected {
+  background-color: rgb(253, 180, 84);
+  color: rgb(36, 32, 255);
+}
+
+/* Column container */
+#row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+#side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.cock {   
+  display:flex;
+   /* IE10 */
+  /* flex: 70%;*/
+  background-color: rgb(253, 169, 169);
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.item img {
+  width: 200px;
+  height: 200px;
+}
+
+.item{
+  text-align: center;
+  margin: 10px;
+  float: left;
+  width: 200px;
+  box-sizing: border-box;
+}
+.annotation img {
+  width: 400px;
+  height: 400px;
+}
+.product-detail
+{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.annotation{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+/* Footer */
+#footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  #row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  #navbar a {
+    float: none;
+    width: 100%;
+  }
+}
